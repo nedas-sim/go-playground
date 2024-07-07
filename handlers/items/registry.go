@@ -18,4 +18,5 @@ func RegisterEndpoints(r *mux.Router) {
 
 	r.HandleFunc("/api/items", da.Get).Methods("GET")
 	r.HandleFunc("/api/items", da.Create).Methods("POST")
+	r.HandleFunc("/api/items/{id}", da.GetById).Methods("GET")
 }

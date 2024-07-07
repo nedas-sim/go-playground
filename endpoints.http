@@ -10,3 +10,7 @@ Content-Type: application/json
     "price": 10,
     "quantity": 5
 }
+
+###
+
+GET http://localhost:8080/api/items/4

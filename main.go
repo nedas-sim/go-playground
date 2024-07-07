@@ -19,8 +19,7 @@ func main() {
 
 	r := mux.NewRouter()
 
-	r.HandleFunc("/api/items", items.Get).Methods("GET")
-	r.HandleFunc("/api/items", items.Create).Methods("POST")
+	items.RegisterEndpoints(r)
 
 	log.Fatal(http.ListenAndServe(":8080", r))
 }
